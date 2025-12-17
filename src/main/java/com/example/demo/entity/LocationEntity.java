@@ -11,7 +11,8 @@ public class LocationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Double longitude;
+    private Double latitudue;
+    private double longitude;
     public Long getId() {
         return id;
     }
@@ -24,17 +25,24 @@ public class LocationEntity {
     public void setName(String name) {
         this.name = name;
     }
-    public Double getLongitude() {
+    public Double getLatitudue() {
+        return latitudue;
+    }
+    public void setLatitudue(Double latitudue) {
+        this.latitudue = latitudue;
+    }
+    public double getLongitude() {
         return longitude;
     }
-    public void setLongitude(Double longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
     public LocationEntity() {
     }
-    public LocationEntity(Long id, String name, Double longitude) {
+    public LocationEntity(Long id, String name, Double latitudue, double longitude) {
         this.id = id;
         this.name = name;
+        this.latitudue = latitudue;
         this.longitude = longitude;
     }
 }
